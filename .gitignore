@@ -1,0 +1,22 @@
+# Build products
+build/
+out/
+output/
+*.o
+*.d
+*.a
+*.bin
+*.elf
+*.map
+*.hex
+*.fwpkg
+
+# Editor / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Local notes
+*.local.md

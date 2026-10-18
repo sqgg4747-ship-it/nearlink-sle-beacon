@@ -1,0 +1,19 @@
+nearlink-sle-beacon
+
+Portions of this project are derived from the HiSilicon WS63 SDK sample "sle_uart".
+
+Original work
+  Copyright (c) HiSilicon (Shanghai) Technologies Co., Ltd. 2023-2023.
+  Source:  https://gitee.com/bearpi/bearpi-pico_h3863
+  Path:    application/samples/products/sle_uart/
+  License: Apache License, Version 2.0
+
+Modifications
+  Copyright (c) 2026 Contributors to the nearlink-sle-beacon project
+  License: MIT
+
+The original copyright notice and attribution are retained here and in each source
+header, as required by clause 4 of the Apache License 2.0.
+
+No SDK headers or SDK source files are redistributed in this repository. Obtain the
+WS63 SDK from the vendor.

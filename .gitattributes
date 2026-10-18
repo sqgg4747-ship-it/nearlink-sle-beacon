@@ -1,0 +1,16 @@
+# Normalise everything to LF in the repository regardless of the host OS.
+* text=auto eol=lf
+
+*.c    text eol=lf
+*.h    text eol=lf
+*.md   text eol=lf
+LICENSE text eol=lf
+NOTICE  text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+
+# Firmware and binary artefacts
+*.bin    binary
+*.elf    binary
+*.map    binary
+*.fwpkg  binary
