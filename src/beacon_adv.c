@@ -51,7 +51,6 @@ static uint8_t g_beacon_on_air[BEACON_PAYLOAD_LEN] = {0};
 static uint8_t g_beacon_pending[BEACON_PAYLOAD_LEN];
 static uint8_t g_beacon_pending_valid = 0;
 
-/* Timestamp of the last real stack operation, in milliseconds. */
 static uint64_t g_beacon_last_op_ms = 0;
 
 /* Local address cache. The seek callback needs it to discard self-originated
@@ -136,9 +135,9 @@ static uint16_t beacon_build_scan_rsp(uint8_t *buf)
  *
  * The vendor sample hardcodes:
  *     unsigned char local_addr[6] = {0x01, 0x02, 0x03, 0x04, 0x05, 0x06};
- * Two boards flashed with the same image therefore share one address. The
- * stack filters inbound announcements against the local address, so each board
- * discards the other's traffic. The symptom is "transmits fine, receives
+ * Every device flashed with the same image therefore shares one address. The
+ * stack filters inbound announcements against the local address, so they discard
+ * each other's traffic. The symptom is "transmits fine, receives
  * nothing", with no error anywhere in the logs.
  *
  * sle_get_local_addr() is not a substitute. After a soft reset it returns

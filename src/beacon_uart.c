@@ -194,7 +194,6 @@ static void *beacon_task(const char *arg)
          * eventually reaches the air. */
         (void)beacon_flush();
 
-        /* UART-side counters, once per second. */
         uint64_t now = uapi_tcxo_get_ms();
         if ((now - t_diag) >= 1000U) {
             t_diag = now;

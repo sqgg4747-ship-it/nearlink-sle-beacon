@@ -41,7 +41,6 @@ typedef enum {
  * Not a performance knob. See docs/failure-modes.md, item 1. */
 #define BEACON_REFRESH_MIN_MS 200U
 
-/* Announce TX power, dBm. */
 #define BEACON_TX_POWER 18
 
 /* ---- API ---- */
