@@ -1,0 +1,71 @@
+name: Bug report
+description: Something does not work on real hardware
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A report without a board name and a log line cannot be reproduced.
+        Please fill in every required field.
+
+  - type: input
+    id: board
+    attributes:
+      label: Board
+      description: Which WS63 board is running the firmware?
+      placeholder: BearPi-Pico H3863 / bare WS63 module / other
+    validations:
+      required: true
+
+  - type: input
+    id: sdk
+    attributes:
+      label: SDK version
+      description: Build date or commit of the WS63 SDK tree you compiled against.
+      placeholder: 2025-01 snapshot, commit abc1234
+    validations:
+      required: true
+
+  - type: dropdown
+    id: symptom
+    attributes:
+      label: What happens
+      options:
+        - Nothing received at all
+        - Received, but the payload is wrong
+        - Received, but only from some senders
+        - Board reboots or crashes
+        - Build failure
+        - Something else
+    validations:
+      required: true
+
+  - type: input
+    id: nodes
+    attributes:
+      label: How many nodes were powered on
+      description: Address collisions only show up with more than one node in range.
+      placeholder: "1"
+    validations:
+      required: true
+
+  - type: textarea
+    id: log
+    attributes:
+      label: UART log
+      description: |
+        Paste the lines around the failure. Include the periodic `[beacon uart]`
+        counters if they appear (bytes / frames / resync), and a few `[RX]` lines
+        from the receiving side.
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: What you already ruled out
+      placeholder: swapped boards, replaced the USB cable, confirmed GND is common...
+    validations:
+      required: false
